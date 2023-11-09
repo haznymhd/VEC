@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lecturer Registration - Virtual Examination Center</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Include the CSS file -->
+  <style>
+    /* Additional CSS to center content */
+    .registration-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .btn-primary {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="registration-container">
+    <h2>Lecturer Registration</h2>
+    <form id="lecturerRegistrationForm">
+      <label for="fullName">Full Name:</label>
+      <input type="text" id="fullName" name="fullName" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <button class="btn-primary" type="submit">Register</button>
+    </form>
+    <p>Don't have an account? <a href="creating%20an%20account.html">Create now</a></p>
+  </div>
+  
+  <script>
+    document.getElementById("lecturerRegistrationForm").addEventListener("submit", function(event) {
+      var fullName = document.getElementById("fullName").value;
+      var email = document.getElementById("email").value;
+      
+      if (fullName === "" || email === "") {
+        event.preventDefault();
+        alert("Both full name and email are required!");
+      }
+    });
+  </script>
+</body>
+</html>

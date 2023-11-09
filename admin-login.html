@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Login - Virtual Examination Center</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Include the CSS file -->
+  <style>
+    /* Additional CSS to center content */
+    .login-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .btn-primary {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Admin Login</h2>
+    <form id="adminLoginForm">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      <button class="btn-primary" type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="creating%20an%20account.html">Create now</a></p>
+  </div>
+  <!-- Include JavaScript file if needed -->
+</body>
+</html>
+<script>
+  document.getElementById("adminLoginForm").addEventListener("submit", function(event) {
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+    
+    if (username === "" || password === "") {
+      event.preventDefault();
+      alert("Both username and password are required!");
+    }
+  });
+</script>
